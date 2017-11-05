@@ -1,5 +1,4 @@
 import base from './base'
-import { Items } from '../api/collections'
 
 export default {
   extends: base,
@@ -8,15 +7,5 @@ export default {
     return {
       items: [],
     }
-  },
-
-  meteor: {
-    $subscribe: {
-      'items': [],
-    },
-
-    items () {
-      return Items.find({})
-    },
   },
 }
